@@ -72,7 +72,7 @@ def weights(imagearray,labelsarray,testimagearray,testlabelarray):
         numWeights.append(np.matmul(cov[1],eigNumbers[num]))
 
     count = 0
-    n=1000
+    n=3000
 
     for input in range(n):
         inputNum = input
@@ -99,7 +99,7 @@ def weights(imagearray,labelsarray,testimagearray,testlabelarray):
         # output the correct answer and our guess for the first n numbers of the test dataset
         print(num,minIndex)
     # print our accuracy as a decimal
-    print(count/1000)
+    print(count/n)
 
 def fileOpener():
     # read in the training and test files as numpy arrays
